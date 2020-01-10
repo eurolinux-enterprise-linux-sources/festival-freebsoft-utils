@@ -1,0 +1,145 @@
+User-visible changes to festival-freebsoft-utils:
+
+* Changes in festival-freebsoft-utils 0.10
+
+** Speech Dispatcher support updated for new libc/iconv.
+
+Due to a change in iconv Speech Dispatcher support has stopped to work.  This
+release fixes the problem.
+
+** TMPDIR environment variable honored.
+
+There is a bug in the current released version of Edinburgh Speech Tools
+resulting in ignoring temporary directory setting in TMPDIR environment
+variable.  festival-freebsoft-utils now contains workaround of this bug.
+
+** Bug fixes.
+
+
+* Changes in festival-freebsoft-utils 0.9
+
+** Character recoding improvements.
+
+Recoding of characters from UTF-8 to 8-bit codings is more kind to extra
+characters, not present in the target coding.  New variable
+`recode-special-utf8-translations' allows to define custom mapping of extra
+characters.
+
+** New function `string-replace'.
+
+** Bug fixes.
+
+
+* Changes in festival-freebsoft-utils 0.8
+
+** New features required by Speech Dispatcher 0.6.4.
+
+** Additional language codes for available Festival voices.
+
+** Bug fixes in SSML support.
+
+
+* Changes in festival-freebsoft-utils 0.7
+
+** Better support of the general intonation method.
+
+It is generally possible to change basic prosodic parameters of voices that use
+general intonation method.
+
+** New languages supported.
+
+Bug fixes and improvements that make Finnish, French and Italian voices work
+with festival-freebsoft-utils.
+
+** New utility functions `butlast' and `abs'.
+
+** Use iconv instead of recode.
+
+Iconv is more stable and better maintained recoding utility than recode.
+
+
+* Changes in festival-freebsoft-utils 0.6
+
+** Manual licensed under both GFDL and GPL.
+
+
+* Changes in festival-freebsoft-utils 0.5
+
+** SSML mode rewritten.
+
+Major cleanup of the mode.
+SSML interaction with Speech Dispatcher improved.
+Additionally spelling support was added, while SSML prosody settings remained
+unimplemented on the synthesis level in this version.
+
+** New utility functions `min' and `max'.
+
+
+* Changes in festival-freebsoft-utils 0.4
+
+No user visible changes, just bug fixes.
+
+
+* Changes in festival-freebsoft-utils 0.3
+
+** New module fileio.scm.
+
+** New module recode.scm.
+
+** Changes of the Speech Dispatcher interface.
+
+The Speech Dispatcher interface was changed to be compatible with Speech
+Dispatcher 0.5 and is not compatible with older Speech Dispatcher versions.
+
+
+* Changes in festival-freebsoft-utils 0.2
+
+** Speech Dispatcher rate and pitch setting changed.
+
+Now the Speech Dispatcher to Festival pitch/rate value mapping is smooth and
+pitch is set relatively to the default pitch of current voice.
+
+** Event handling mechanism was reworked.
+
+Event handling was redesigned to produce better results and to be cleaner and
+more robust.
+
+** Voice and language selection mechanism was generalized and simplified.
+
+There are new language-codes and voice-select-defaults variables that replace
+the old speechd-* voice and language selection variables.
+
+** New functions for unified setting of prosodic parameters.
+
+With their help, you can change basic prosodic parameters like pitch, rate or
+volume easily.
+
+** There is new option for disabling initial pauses in synthesized samples.
+
+See the variable inhibit-initial-pauses.
+
+** Utterance chunking implemented in SIOD.
+
+It is now possible to perform utterance chunking not only in tts_file, but in
+any extension function.
+
+** Synthesized events can be returned in multiple wave forms.
+
+See the manual entry of the multiple.scm module for description why this can be
+useful.  The Speech Dispatcher interface was enhanced this way too.
+
+** Rudimentary SSML support.
+
+** New utility functions.
+
+See documentation of the util.scm and wave.scm files for the complete list of
+available utility functions.
+
+** SoX is required.
+
+The SoX sound processing tool is now required for most of the functionality.
+
+
+Local variables:
+mode: outline
+end:

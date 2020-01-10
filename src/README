@@ -1,0 +1,63 @@
+festival-freebsoft-utils is a collection of Festival utilities that
+enhance Festival with some useful features.  They provide all what is
+needed for interaction with Speech Dispatcher.
+
+Key festival-freebsoft-utils features are:
+
+- Generalized concept of input events.  festival-freebsoft-utils
+  allows not only plain text synthesis, but also combining it with
+  sounds.  Additionally, mechanism of logical events mapped to other
+  events is provided.
+
+- Substitution of events for given words.
+
+- High-level voice selection mechanism and setting of basic prosodic
+  parameters.
+
+- Spelling mode.
+
+- Capital letter signalization.
+
+- Punctuation modes, for explicit reading or not reading punctuation
+  characters.
+
+- Incremental synthesis of texts and events.
+
+- Speech Dispatcher support.
+
+- Rudimentary SSML support.
+
+- Enhancing the Festival extension language with some functions
+  commonly used in Lisp.  Support for wrapping already defined
+  Festival functions by your own code.
+
+- Everything is written in the extension language, no patching of the
+  Festival C++ sources is needed.
+
+All the functionality is under development.  Some things could be done in a
+better way, any help is welcome.
+
+You can contact us on the mailing list speechd@freebsoft.org.
+
+
+REQUIREMENTS
+
+- Festival 1.4.3.
+
+- SoX.
+
+- iconv. 
+
+
+INSTALLATION
+
+- Copy all the *.scm files to a directory contained in the Festival's
+  load-path.  (Type `load-path' in Festival to view the directory list.)
+
+
+USAGE
+
+Look at the festival-freebsoft-utils manual in festival-freebsoft-utils.info.
+
+
+-- Milan Zamazal <pdm@freebsoft.org>
