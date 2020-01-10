@@ -1,6 +1,6 @@
 Name:          festival-freebsoft-utils
 Version:       0.10
-Release:       6%{?dist}
+Release:       7%{?dist}
 Summary:       A collection of utilities that enhance Festival with some useful features
 
 Group:         System Environment/Libraries
@@ -53,6 +53,9 @@ cp -p *.scm %{buildroot}/%{_datadir}/festival/lib/
 %{_datadir}/festival/lib/*.scm
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.10-7
+- Mass rebuild 2013-12-27
+
 * Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.10-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
